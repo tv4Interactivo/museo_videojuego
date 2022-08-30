@@ -9,26 +9,24 @@
 html,
 body
 {
-    overflow: hidden;
+  width: 100vw;
+  position: relative;
+    overflow-x: hidden;
     
 }
 
 .logo{
-  position: absolute;
-  bottom: 5%;
-  right: 5%;
-  width: 10%;
-  height: 10%;
-  z-index: 2;
-}
-
-.webgl{
-  touch-action: none;
+position: fixed;
+right: 3%;
+bottom: 20px;
+width: 5%;
+height: auto;
+z-index: 1;
 }
 
   h1{
     color: white;
-    position: absolute;
+    position: fixed;
     font-size: 3rem;
     top: 20px;
     left: 20px;
@@ -96,6 +94,51 @@ body
     background-color:#272727;
   }
 
+  .webgl{
+    touch-action: none;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+  }
+
+  .scroller {
+    top: 0vh;
+    width: 100vw;
+    height: 800vh;
+    z-index: 2;
+  }
+
+  .caption {
+    background-color: rgba(0,0,0,0.75);
+    padding: 2rem;
+    width: 340px;
+    position: absolute;
+  }
+
+  .caption p {
+    color: white;
+    line-height: 1.5;
+  }
+
+  #c1 {
+    top: 200vh;
+    left: 15vw;
+  }
+  #c2 {
+    top: 350vh;
+    right: 20vw;
+  }
+  #c3 {
+    top: 450vh;
+    left: 20vw;
+  }
+  #c4 {
+    top: 600vh;
+    right: 10vw;
+  }
+
   @media screen and (min-width:320px) and (max-width: 500px) {
     .dropbtn{
       margin: 20px;
@@ -113,13 +156,15 @@ body
       font-size: 1rem;
     }
   
-    .logo2{
+    .logo{
       width: 15%;
-    }
+      }
   }
   
   @media screen and (min-width:500px) and (max-width: 840px) {
-  
+    .logo{
+      width: 10%;
+      }
   }
 
 
